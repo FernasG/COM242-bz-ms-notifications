@@ -1,0 +1,20 @@
+version: "3.9"
+
+networks:
+  bz-network:
+    name: bz-network
+    external: true
+
+services:
+  bz-ms-notifications:
+    build: .
+    container_name: bz-ms-notifications
+    image: bz-ms-notifications:latest
+    env_file:
+      - .env
+    environment:
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ${PWD}:/app
+    networks:
+      - bz-network
