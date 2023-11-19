@@ -1,0 +1,1 @@
+export const SES_ASYNC_OPTIONS: symbol = Symbol("SES_ASYNC_OPTIONS");
